@@ -1,0 +1,54 @@
+@startuml
+
+abstract class Checker {
+    - protected:  Checker
+    -Basic:int
+    -Geographical:int
+    -Blacklist:int
+    -HighRisk:int
+    + setNextChecker: void
+    +checkPay:void
+    +write:void
+
+}
+
+
+class Basic {
+
+   +write:void
+}
+class Geographical {
+
+   +write:void
+}
+class Blacklist {
+
+   +write:void
+}
+class HighRisk {
+
+   +write:void
+}
+
+
+
+
+
+
+
+
+class Main {
+    + main(args: String[]): void
+}
+
+
+
+Checker --> Basic
+Checker --> Geographical
+Checker --> HighRisk
+Checker --> Blacklist
+
+
+
+
+@enduml
