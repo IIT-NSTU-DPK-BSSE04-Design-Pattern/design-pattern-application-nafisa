@@ -1,0 +1,49 @@
+@startuml
+
+' Interface for Notifiers
+interface Vehicle {
+
+    + system(): void
+}
+
+' Concrete Notifier class
+class Car {
+
+   + system(): void
+}
+
+
+class Truck {
+
+   + system(): void
+}
+
+class Motorcycle {
+
+   + system(): void
+}
+
+
+
+
+class VehicleFactory {
+
+}
+
+' Main class
+class Main {
+    + main(args: String[]): void
+}
+
+' Relationships
+Vehicle <|.. Car
+Vehicle <|.. Truck
+Vehicle <|.. Motorcycle
+
+
+
+
+Vehicle --> VehicleFactory: Uses
+
+
+@enduml
